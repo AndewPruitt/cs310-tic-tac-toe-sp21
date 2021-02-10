@@ -32,6 +32,7 @@ public class TicTacToeView extends JPanel {
     public TicTacToeView(TicTacToeController controller, int dimension) {
 
         this.controller = controller;
+        this.dimension = dimension;
         
         /* Initialize GUI Elements and Containers */
 
@@ -43,9 +44,9 @@ public class TicTacToeView extends JPanel {
         
         /* Create Button Array */
         
-        for (int i = 0; i < dimension; ++i) {
+        for (int i = 0; row < dimension; row++) {
             
-            for (int j = 0; j < dimension; ++j) {
+            for (int j = 0; col < dimension; col++) {
                 
                 board[i][j] = new JButton(); 
                 board[i][j].addActionListener(controller);
