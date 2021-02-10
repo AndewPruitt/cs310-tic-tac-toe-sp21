@@ -130,7 +130,7 @@ public class TicTacToeView extends JPanel {
 
     }
             
-    }
+
         
     /**
     * This method updates the result label to display the final result of the
