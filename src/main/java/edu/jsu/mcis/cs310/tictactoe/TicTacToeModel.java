@@ -77,7 +77,7 @@ public class TicTacToeModel {
     
     
         if(isValidSquare(row,col) == true && isSquareMarked (row,col) == false){
-            if(isXTurn() = true) {
+            if(isXTurn() == true) {
              board[row][col] = TicTacToeSquare.X;
                 xTurn=!xTurn;
                 return true;
