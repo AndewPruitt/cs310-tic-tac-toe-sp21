@@ -74,8 +74,9 @@ public class TicTacToeModel {
     * @see         TicTacToeSquare
     */
     public boolean makeMark(int row, int col) {
-        
-        if(isValisSquare(row,col) == true && isSquareMarked (row,col) == false){
+    
+    
+        if(isValidSquare(row,col) == true && isSquareMarked (row,col) == false){
             if(isXTurn() = true) {
              board[row][col] = TicTacToeSquare.X;
                 xTurn=!xTurn;
@@ -103,9 +104,9 @@ public class TicTacToeModel {
     private boolean isValidSquare(int row, int col) {
         
         boolean validSquare = false;
-       if ((row < dimesion) && (row >= 0)){
+       if ((row < dimension) && (row >= 0)){
            
-          if ((col < dimesion) && (col >= 0)){
+          if ((col < dimension) && (col >= 0)){
               validSquare = true;
           }
            
@@ -213,7 +214,7 @@ for (int r = 0; r < dimension; r++) {
     }
 }
 int control = 0;
-for (int r= (dimesion-1); r > -1; r--){
+for (int r= (dimension-1); r > -1; r--){
     
     if(board[r][control] != mark) {
         break;
@@ -257,7 +258,7 @@ for (int r = 0; r < dimension; r++) {
             }
         }
         
-        return emptySquare == false && (isMarkWin(TicTacToe.Square.O) == false || isMarkWin(TicTacToe.Square.X)==false);
+        return emptySquare == false && (isMarkWin(TicTacToeSquare.O) == false || isMarkWin(TicTacToeSquare.X)==false);
         
     }
 
@@ -317,7 +318,7 @@ for (int r = 0; r < dimension; r++) {
                 output.append(r);
             }
         output.append("\n");
-            for (int r = 0; r<dimesion; r++){
+            for (int r = 0; r<dimension; r++){
                     output.append(r);
                     output.append(" ");
                 
