@@ -4,8 +4,8 @@ package edu.jsu.mcis.cs310.tictactoe;
 * TicTacToeSquare represents the state of an individual square on a Tic-Tac-Toe
 * game board, or the specified player's mark.
 *
-* @author  Your Name
-* @version 1.0
+* @author  AndrewPruitt
+* @version 2.0
 */
 public enum TicTacToeSquare {
     
