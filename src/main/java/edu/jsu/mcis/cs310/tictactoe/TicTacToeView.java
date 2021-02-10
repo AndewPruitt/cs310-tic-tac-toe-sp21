@@ -44,8 +44,8 @@ public class TicTacToeView {
 		
 	}
 	    else{
-		    system.out.println("Player 2 (O) Move:\");
-				       }
+		System.out.println("Player 2 (O) Move:\n");
+	}
 
     }
     
