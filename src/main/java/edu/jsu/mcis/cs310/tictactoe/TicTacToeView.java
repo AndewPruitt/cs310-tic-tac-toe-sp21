@@ -43,11 +43,19 @@ public class TicTacToeView {
 		System.out.println("Player 1 (X) Move:\n");
 		
 	}
-	    else{
+	    else {
 		System.out.println("Player 2 (O) Move:\n");
-	}
+		}
 
+	System.out.print("Enter the row and column numbers, separated by a space: ");
+            int row = keyboard.nextInt();
+            int col = keyboard.nextInt();
+            
+            TicTacToeMove move = new TicTacToeMove(row, col);
+            return move;
+	    
     }
+	
     
     /**
     * This method displays a descriptive error message if there was a problem
