@@ -228,7 +228,7 @@ for (int r= (dimesion-1); r > -1; r--){
 for (int r = 0; r < dimension; r++) { 
     
     if (board[r][r] != mark){
-        break 
+        break; 
     }
     if (r==(dimension - 1) && board [r][r] == mark) {
         flag = false;
@@ -257,7 +257,7 @@ for (int r = 0; r < dimension; r++) {
             }
         }
         
-        return emptySquare == false && (isMarkWin(TicTacToe.Square.O) == false || (isMarkWin(TicTacToe.Square.X)==false);
+        return emptySquare == false && (isMarkWin(TicTacToe.Square.O) == false || isMarkWin(TicTacToe.Square.X)==false);
         
     }
 
@@ -313,10 +313,10 @@ for (int r = 0; r < dimension; r++) {
         
         StringBuilder output = new StringBuilder();
         output.append("   ");
-            for (int r = 0: r<dimension; r++){
+            for (int r = 0; r<dimension; r++){
                 output.append(r);
             }
-        output.append("\n")
+        output.append("\n");
             for (int r = 0; r<dimesion; r++){
                     output.append(r);
                     output.append(" ");
