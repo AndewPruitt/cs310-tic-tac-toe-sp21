@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 /**
 * TicTacToeController implements the Controller for the Tic-Tac-Toe game.
 * 
-* @author  Jay Snellen, III
+* @author  AndrewPruitt
 * @version 2.0
 * 
 * (Instead of the Controller implementing the flow of execution in a main loop,
