@@ -53,7 +53,7 @@ public class TicTacToeModel {
         /* Initialize board (fill with TicTacToeSquare.EMPTY) */
         
         for (int r=0; r < dimension; r++) { 
-            for (int c=0 c < dimension; c++) {
+            for (int c=0; c < dimension; c++) {
                 board [r][c] = TicTacToeSquare.EMPTY;
             }
         }
@@ -190,8 +190,8 @@ public class TicTacToeModel {
         
         boolean flag = true;
         
-for int( r = 0; r < dimension; r++) {
-    for int(c = 0; r < dimension; c++){
+for (int r = 0; r < dimension; r++) {
+    for (int c = 0; r < dimension; c++){
         if (board [c][r] != mark)
             break;
         
@@ -201,8 +201,8 @@ for int( r = 0; r < dimension; r++) {
     }
 }
         
-   for int( r = 0; r < dimension; r++) {
-        for int(c = 0; r < dimension; c++){
+   for (int r = 0; r < dimension; r++) {
+        for (int c = 0; r < dimension; c++){
               if (board [r][c] != mark)
                      break;
         
@@ -249,7 +249,7 @@ for (int r = 0; r < dimension; r++) {
         boolean emptySquare = false;
         
         for (int r = 0; r < dimension; r++){
-            for(intc = 0; c < dimension; c++){
+            for(int c = 0; c < dimension; c++){
                 if (board [r][c] == TicTacToeSquare.EMPTY){
                     
                     emptySquare = true;
@@ -313,7 +313,7 @@ for (int r = 0; r < dimension; r++) {
         
         StringBuilder output = new StringBuilder();
         output.append("   ");
-            for(int r = 0: r<dimension; r++){
+            for (int r = 0: r<dimension; r++){
                 output.append(r);
             }
         output.append("\n")
