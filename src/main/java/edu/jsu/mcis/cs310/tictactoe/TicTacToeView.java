@@ -6,7 +6,7 @@ import javax.swing.*;
 /**
 * TicTacToeView implements a GUI-based View for the Tic-Tac-Toe game.
 *
-* @author  Jay Snellen, III
+* @author  AndrewPruitt
 * @version 2.0
 * 
 * This version of the Tic-Tac-Toe game uses a GUI for I/O, so the View
@@ -17,6 +17,8 @@ import javax.swing.*;
 public class TicTacToeView extends JPanel {
     
     private final TicTacToeController controller;
+    private int dimension;
+    
 
     private JButton[][] board;
     private JPanel squaresPanel;
@@ -32,6 +34,7 @@ public class TicTacToeView extends JPanel {
     public TicTacToeView(TicTacToeController controller, int dimension) {
 
         this.controller = controller;
+        this.dimension = dimension;
         
         /* Initialize GUI Elements and Containers */
 
@@ -43,15 +46,15 @@ public class TicTacToeView extends JPanel {
         
         /* Create Button Array */
         
-        for (int i = 0; i < dimension; ++i) {
+        for (int row = 0; row < dimension; row++) {
             
-            for (int j = 0; j < dimension; ++j) {
+            for (int col = 0; col < dimension; col++) {
                 
-                board[i][j] = new JButton(); 
-                board[i][j].addActionListener(controller);
-                board[i][j].setName("Square" + i + j); // Assign button names
-                board[i][j].setPreferredSize(new Dimension(64,64));
-                squaresPanel.add(board[i][j]);
+                board[row][col] = new JButton(); 
+                board[row][col].addActionListener(controller);
+                board[row][col].setName("Square" + i + j); // Assign button names
+                board[row][col].setPreferredSize(new Dimension(64,64));
+                squaresPanel.add(board[row][col]);
                 
             }
             
@@ -99,7 +102,13 @@ public class TicTacToeView extends JPanel {
     */
     public void updateSquares() {
 
-        // INSERT YOUR CODE HERE
+        for(int row = 0; row < board.length; row++) {
+               
+            for(int col = 0; col < board.length; col++) {
+                
+                this.board[row][col].setText(controller.getSquareAsString(row, col));
+            }
+        }
 
     }
     
@@ -112,7 +121,13 @@ public class TicTacToeView extends JPanel {
     */
     public void disableSquares() {
     
-        // INSERT YOUR CODE HERE
+        for(int row = 0; row < dimension; row++) {
+               
+            for(int col = 0; col < dimension; col++) {
+                
+                this.board[row][col].setEnabled(false);
+            }
+        }
             
     }
         
