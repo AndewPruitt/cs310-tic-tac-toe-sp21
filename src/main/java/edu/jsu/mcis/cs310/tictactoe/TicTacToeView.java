@@ -17,7 +17,9 @@ import javax.swing.*;
 public class TicTacToeView extends JPanel {
     
     private final TicTacToeController controller;
-
+    private int dimension;
+    
+    
     private JButton[][] board;
     private JPanel squaresPanel;
     private JLabel resultLabel;
